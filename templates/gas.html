@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gas Generation Percentage</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='gas.css') }}">
+</head>
+<body >
+    <div id="container">
+    <h1 style="font-size: 75px;">&#128268; &#127981; &#10067;</h1>
+        <form action="/submit" method="POST">
+        <div id="form-container">
+            <input type="text" name="postcode" id="postcode" maxlength="8" placeholder="Enter postcode">
+            <button type="submit">Submit</button>    
+        </div>
+        </form>
+        
+        <h3>{{output}}</h3>
+        </div>
+    
+
+</body>
+</html>

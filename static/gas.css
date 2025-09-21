@@ -1,0 +1,63 @@
+body {
+    background-position:center;
+    background-color: darkslategrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+button {
+    height: 50px;
+    border-radius: 5px;
+    width: 100px;
+    border-width: 3px;
+    font-size: large;
+    transition-duration: 0.4s;
+    background-color: palevioletred;
+    color: azure;
+}
+
+input {
+    height: 50px;
+    border-radius: 5px;
+    width: 150px;
+    border-width: 3px;
+    font-size: large;
+}
+
+button:hover {
+    border-color: violet;
+    background-color: violet;
+}
+
+#display-area {
+    border-style: solid;
+    border-radius: 10px;
+    background-color: light grey;
+}
+
+h3 {
+    color: azure;
+    max-width: 80%;
+}
+
+#container {
+        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-color: azure;
+    
+    border-radius: 30px;
+    width: 550px;
+    height: 550px;
+}

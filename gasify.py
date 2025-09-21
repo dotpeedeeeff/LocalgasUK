@@ -32,7 +32,7 @@ def fuel_percentage():
         fuel_type = actual['fuel']
         percentage = actual['perc']
 
-        output = f"{percentage}% of electrical generation is provided by {fuel_type}."
+        output = f": {fuel_type} is generating {percentage}% of electricity."
 
         return output
 
@@ -65,7 +65,7 @@ def local_gas(postcode):
 
     if status_code == 400:
 
-        error_msg = "Postcode not found, defaulting to national data. "
+        error_msg = "Postcode not found, defaulting to national data"
         national_data = fuel_percentage()
         return error_msg + national_data
 
