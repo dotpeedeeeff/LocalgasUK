@@ -10,12 +10,8 @@ if __name__ == "__main__":
 
 @app.route("/")
 def home():
-
-    gas_string = gasify.fuel_percentage()
-
-    gas = f"{gas_string}"
-
-    return render_template("home.html", len=0, gas=gas)
+ 
+    return render_template("home.html", len=0)
 
 
 @app.route("/submit", methods=['POST'])
@@ -25,4 +21,4 @@ def local_generation():
     outgoing = pc.extract_outer(postcode)
     gas_amount = gasify.local_gas(outgoing)
 
-    return f"In {outgoing}, " + gas_amount
+    return gas_amount
