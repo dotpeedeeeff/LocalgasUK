@@ -31,3 +31,23 @@ def fuel_percentage():
     output = f"{percentage}% of electrical generation is provided by {fuel_type}."
 
     return output
+
+
+def local_gas(postcode):
+    headers = {
+        'Accept': 'application/json'
+    }
+
+    url = f"https://api.carbonintensity.org.uk/regional/postcode/{postcode}"
+
+    r = requests.get(url, params={}, headers=headers)
+
+    data = r.json()
+
+    actual = (data['data'][0]['data'][0]['generationmix'][3])
+    fuel_type = actual['fuel']
+    percentage = actual['perc']
+
+    output = f"{percentage}% of electrical generation is provided by {fuel_type}."
+
+    return output
