@@ -61,3 +61,8 @@ h3 {
     width: 550px;
     height: 550px;
 }
+
+input:focus {
+    border: solid 5px darkred;
+    outline: none;
+}

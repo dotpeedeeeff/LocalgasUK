@@ -1,5 +1,4 @@
 import gasify
-import postcode as pc
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -18,8 +17,7 @@ def home():
 def local_generation():
 
     postcode = request.form['postcode']
-    outgoing = pc.extract_outer(postcode)
-    gas_amount = gasify.local_gas(outgoing)
+    gas_amount = gasify.local_gas(postcode)
 
     return render_template("gas.html", len=0, output=gas_amount)
 
